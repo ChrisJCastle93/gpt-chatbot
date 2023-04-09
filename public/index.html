@@ -1,0 +1,37 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="w-screen h-screen flex align-items justify-content bg-slate-100">
+      <div class="mx-auto h-auto w-[400px] bg-white m-12 rounded-lg">
+        <div id="chat-container" class="flex flex-col h-full">
+          <h2 class="text-2xl font-black text-white rounded-t-lg bg-indigo-800 text-center p-2">My First Chatbot</h2>
+          <ul id="messages" role="list" class="grow p-4 overflow-y-scroll"></ul>
+          <form id="message-form">
+            <div class="flex rounded-b-md shadow-sm px-4 py-2 bg-indigo-100/50">
+              <div class="relative flex flex-grow items-stretch focus-within:z-10">
+                <textarea type="text" id="message-input" placeholder="Type your message" autocomplete="off" class="block w-full rounded-none rounded-l-md border-0 py-1.5 pl-2 text-gray-800 ring-0 ring-offset-0 border-transparent border-4 border-solid outline-none focus:border-transparent placeholder:text-gray-800 sm:text-sm sm:leading-6 focus:border-4 focus:border-solid focus:border-transparent resize-none"></textarea>
+              </div>
+              <button type="submit" class="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-md px-3 py-2 text-sm font-semibold text-indigo-200 bg-indigo-800 hover:bg-indigo-600"><span class="hue-rotate-30">Send</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
